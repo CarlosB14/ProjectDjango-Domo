@@ -12,27 +12,27 @@ ProjectDjango-Domo is a Django-based web application designed to manage and auto
 The project dependencies are listed in the `requirements.txt` file, which can be installed with:
 ```bash
 pip install -r requirements.txt
-
+```
 ### Navigate to the project directory and set up a virtual environment:
 ```bash
 cd ProjectDjango-Domo
 python3 -m venv env
 source env/bin/activate  # For Linux/macOS
 env\Scripts\activate  # For Windows
-
+```
 
 ### Install dependencies:
 ```bash
 pip install -r requirements.txt
-
+```
 ### Run database migrations:
 ```bash
 python manage.py migrate
-
+```
 ### Start the development server:
 ```bash
 python manage.py runserver
-
+```
 ## Project Structure
 - `domotica/`: Core Django app handling home automation functionalities.
 - `.gitignore`: Ensures sensitive files and unnecessary directories are not tracked.
