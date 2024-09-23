@@ -1,0 +1,17 @@
+{% extends 'core/layout.html' %}
+
+{% block head_title %}Contact{% endblock %}
+
+
+{% block page_body %}
+  {% if success %}
+    <p>Se ha enviado el formulario correctamente</p>
+  {% else %}
+    <form action="" method="POST">
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button>Enviar</button>
+    </form>
+  {% endif %}
+  <p>Escríbenos a <a href="mailto:correo@hola.com">Correo de empresa</a></p>
+{% endblock %}

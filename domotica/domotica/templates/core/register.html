@@ -1,0 +1,16 @@
+{% extends 'core/layout.html' %}
+
+{% block head_title %}Register{% endblock %}
+
+
+{% block page_body %}
+  {% if form %}
+    <form action="" method="post">
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button>Enviar</button>
+    </form>
+  {% else %}
+    <p>{{  msg  }}</p>
+  {% endif %}
+{% endblock %}

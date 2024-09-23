@@ -1,0 +1,9 @@
+env
+.env
+db.sqlite3
+.vscode/
+node_modules/
+staticfiles/
+media/
+*.pyc
+migrations/

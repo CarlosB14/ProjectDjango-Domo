@@ -1,0 +1,17 @@
+{% extends 'core/layout.html' %}
+
+{% block head_title %}Products{% endblock %}
+
+
+{% block page_body %}
+<h1>Increibles productos</h1>
+  
+  {% for product in products %}
+    <article id="{{ product.pk }}">
+        <h2>{{ product.name }}</h2>
+        <div>{{ product.description|truncatechars:25|safe }}</div>
+        <p>{{ product.price }} €</p>
+        <p><a href="{% url 'products:product_detail' product.pk %} ">Más detalle</a></p>
+    </article>
+  {% endfor %}
+  {% endblock %}

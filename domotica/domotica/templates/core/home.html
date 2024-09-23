@@ -1,0 +1,27 @@
+{% extends 'core/layout.html' %}
+
+{% block head_title %}Página Home{% endblock %}
+
+{% block page_body %}
+  <h1>Instalación de alarmas y cámaras de seguridad sin cuotas</h1>
+  <p>No es necesario pagar una cuota mensual para tener un hogar seguro.  Realizamos la instalación de la alarma en Murcia y Alicante de forma rápida y económica.</p>
+  <button>Contáctanos</button>
+
+  <section class="services">
+    <h2>Nuestros servicios</h2>
+    <div class="service">
+      {% for service in services %}
+        <article id="{{ service.pk }}">
+          {% if service.services_image %}
+          <picture>
+            <img src="{{ service.services_image.thumbnails.large.url }}" alt="">
+          </picture>
+          {% endif %}
+          <h4>{{ service.title }}</h4>
+          <p>{{ service.description|safe }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+  
+{% endblock %}

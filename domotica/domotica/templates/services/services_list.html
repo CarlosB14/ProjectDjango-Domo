@@ -1,0 +1,9 @@
+<div class="service">
+    {% for service in services %}
+      <article id="{{ service.pk }}">
+        <figure></figure>
+        <h4>{{ service.title }}</h4>
+        <p>{{ service.description }}</p>
+      </article>
+    {% endfor %}
+</div>

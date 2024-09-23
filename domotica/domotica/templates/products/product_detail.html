@@ -1,0 +1,16 @@
+{% extends 'core/layout.html' %}
+
+{% block head_title %}Product_detail{% endblock %}
+
+
+{% block page_body %}
+<h1>Detalle producto</h1>
+  
+    <article id="{{ product.pk }}">
+        <h2>{{ product.name }}</h2>
+        <div>{{ product.description|safe}}</div>
+        <p>{{ product.price }} €</p>
+        <p><a href="{% url 'products:products_list' %}">Volver a los productos</a></p>
+    </article>
+
+  {% endblock %}
